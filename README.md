@@ -110,7 +110,7 @@
       <b>과목 상태 편집
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1330px"><br>
+      <img src="https://github.com/user-attachments/assets/a70961fe-f10a-49f3-b7df-c906d73e906e" width="1330px"><br>
       <b>출석 학생 얼굴 인식
     </td>
   </tr>
@@ -132,7 +132,7 @@
       <b>해당 과목의 출결 조회
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1280px"><br>
+      <img src="https://github.com/user-attachments/assets/f437e711-2417-45d3-9736-dc71834c860d" width="1280px"><br>
       <b>사용자 얼굴 등록
     </td>
   </tr>
