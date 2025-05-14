@@ -1,4 +1,4 @@
-# 2025_capstone_dewdog
+# 2025_capstone_checkmates
 # [팀명]
 ### 듀가나디
 * 팀원
