@@ -1,0 +1,3 @@
+rep "check/check@14569627710874@cloud"
+  path "/"
+    smartbranch "/main"

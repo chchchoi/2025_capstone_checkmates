@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "224700644181",
+    "project_id": "checkmates-5afa6",
+    "storage_bucket": "checkmates-5afa6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224700644181:android:80e0cff359989799d88ddc",
+        "android_client_info": {
+          "package_name": "com.hansung.ganadi.checkmates"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_icYrsuzojIFVHLOS4gsARGjFmLk4vOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
