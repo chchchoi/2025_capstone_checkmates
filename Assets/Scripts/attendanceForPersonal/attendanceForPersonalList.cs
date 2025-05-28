@@ -16,7 +16,7 @@ public class AttendanceForPersonalList : MonoBehaviour
     public Transform scrollViewContent;
     public GameObject attendanceButtonPrefab;
 
-    public Sprite[] randomSprites; // 🎲 랜덤 이미지용 3개 스프라이트
+    public Sprite[] randomSprites; // 랜덤 이미지용 3개 스프라이트
     public Sprite presentSprite;
     public Sprite lateSprite;
     public Sprite absentSprite;
@@ -32,16 +32,16 @@ public class AttendanceForPersonalList : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("✅ Start 실행됨");
+        Debug.Log("Start 실행됨");
 
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
             if (task.Exception != null)
             {
-                Debug.LogError("🔥 Firebase 초기화 실패: " + task.Exception);
+                Debug.LogError("Firebase 초기화 실패: " + task.Exception);
                 return;
             }
 
-            Debug.Log("✅ Firebase 초기화 성공");
+            Debug.Log("Firebase 초기화 성공");
 
             db = FirebaseFirestore.DefaultInstance;
             FirebaseUser user = FirebaseAuth.DefaultInstance.CurrentUser;
@@ -51,8 +51,8 @@ public class AttendanceForPersonalList : MonoBehaviour
                 currentEmail = user.Email;
                 selectedSubject = PlayerPrefs.GetString("SelectedSubjectName");
 
-                Debug.Log("👤 현재 사용자 이메일: " + currentEmail);
-                Debug.Log("📚 선택된 과목: " + selectedSubject);
+                Debug.Log("현재 사용자 이메일: " + currentEmail);
+                Debug.Log("선택된 과목: " + selectedSubject);
 
                 currentDate = DateTime.Now;
                 weekDays = new List<string> { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
@@ -61,14 +61,14 @@ public class AttendanceForPersonalList : MonoBehaviour
             }
             else
             {
-                Debug.LogError("❌ 로그인된 사용자가 없습니다.");
+                Debug.LogError("로그인된 사용자가 없습니다.");
             }
         });
     }
 
     void CheckAttendance()
     {
-        Debug.Log("🔍 CheckAttendance 시작");
+        Debug.Log("CheckAttendance 시작");
 
         db.Collection("subjects")
           .WhereEqualTo("name", selectedSubject)
@@ -81,28 +81,28 @@ public class AttendanceForPersonalList : MonoBehaviour
                   if (snapshot.Exists && snapshot.ContainsField("personal"))
                   {
                       List<string> emails = snapshot.GetValue<List<string>>("personal");
-                      Debug.Log("📧 personal 이메일 목록 로드됨");
+                      Debug.Log("personal 이메일 목록 로드됨");
 
                       if (emails.Contains(currentEmail))
                       {
-                          Debug.Log("✅ 이메일이 personal 목록에 포함됨");
+                          Debug.Log("이메일이 personal 목록에 포함됨");
                           GetSubjectDetails(snapshot);
                       }
                       else
                       {
-                          Debug.LogWarning("⚠️ 이메일이 personal 목록에 없음");
+                          Debug.LogWarning("이메일이 personal 목록에 없음");
                           DisplayNoAttendanceInfo("출석 정보가 없습니다. (이메일 미포함)");
                       }
                   }
                   else
                   {
-                      Debug.LogWarning("⚠️ 문서에 personal 필드 없음");
+                      Debug.LogWarning("문서에 personal 필드 없음");
                       DisplayNoAttendanceInfo("과목 정보가 없거나 personal 필드가 없습니다.");
                   }
               }
               else
               {
-                  Debug.LogError("❌ 과목 문서 가져오기 실패: " + task.Exception);
+                  Debug.LogError("과목 문서 가져오기 실패: " + task.Exception);
                   DisplayNoAttendanceInfo("출석 데이터를 가져오는 데 실패했습니다.");
               }
           });
@@ -125,24 +125,24 @@ public class AttendanceForPersonalList : MonoBehaviour
 
             if (startDayIndex != -1)
             {
-                Debug.Log("✅ 요일 인덱스 파싱 성공: " + startDayIndex);
+                Debug.Log("요일 인덱스 파싱 성공: " + startDayIndex);
                 CreateAttendanceButtons(createDate, startDayIndex, snapshot.Id);
             }
             else
             {
-                Debug.LogError("❌ 요일 파싱 실패: " + dayStr);
+                Debug.LogError("요일 파싱 실패: " + dayStr);
             }
         }
         else
         {
-            Debug.LogWarning("⚠️ createDate 또는 day 필드 없음");
+            Debug.LogWarning("createDate 또는 day 필드 없음");
             DisplayNoAttendanceInfo("과목 정보에 날짜나 요일 정보가 없습니다.");
         }
     }
 
     void CreateAttendanceButtons(DateTime createDate, int startDayIndex, string subjectId)
     {
-        Debug.Log("🎯 CreateAttendanceButtons 시작");
+        Debug.Log("CreateAttendanceButtons 시작");
 
         List<DateTime> dateList = new List<DateTime>();
         DateTime tempDate = createDate;
@@ -164,7 +164,7 @@ public class AttendanceForPersonalList : MonoBehaviour
         {
             string dateStr = date.ToString("yyyy-MM-dd");
             dateStrings.Add(dateStr);
-            Debug.Log($"📅 버튼 생성 대상 날짜: {dateStr}");
+            Debug.Log($"버튼 생성 대상 날짜: {dateStr}");
         }
 
         db.Collection("subjects")
@@ -174,7 +174,7 @@ public class AttendanceForPersonalList : MonoBehaviour
           .ContinueWithOnMainThread(task => {
               if (task.IsCompleted)
               {
-                  Debug.Log("📂 출석 문서 가져오기 성공");
+                  Debug.Log("출석 문서 가져오기 성공");
 
                   QuerySnapshot allDocs = task.Result;
                   Dictionary<string, string> attendanceMap = new Dictionary<string, string>();
@@ -197,7 +197,7 @@ public class AttendanceForPersonalList : MonoBehaviour
               }
               else
               {
-                  Debug.LogError("❌ 출석 문서 가져오기 실패: " + task.Exception);
+                  Debug.LogError("출석 문서 가져오기 실패: " + task.Exception);
                   DisplayNoAttendanceInfo("출석 문서를 가져오는 데 실패했습니다.");
               }
           });
@@ -205,18 +205,18 @@ public class AttendanceForPersonalList : MonoBehaviour
 
     void CreateAttendanceButton(string date, string status)
     {
-        Debug.Log($"🧷 버튼 생성 중: {date} - {status}");
+        Debug.Log($"버튼 생성 중: {date} - {status}");
 
         if (attendanceButtonPrefab == null)
         {
-            Debug.LogError("❌ attendanceButtonPrefab이 null입니다. 인스펙터에서 할당해주세요!");
+            Debug.LogError("attendanceButtonPrefab이 null입니다. 인스펙터에서 할당해주세요!");
             return;
         }
 
         GameObject buttonObject = Instantiate(attendanceButtonPrefab, scrollViewContent);
         if (buttonObject == null)
         {
-            Debug.LogError("❌ 버튼 프리팹 인스턴스화 실패!");
+            Debug.LogError("버튼 프리팹 인스턴스화 실패!");
             return;
         }
 
@@ -260,17 +260,17 @@ public class AttendanceForPersonalList : MonoBehaviour
             button.onClick.AddListener(() => OnAttendanceButtonClick(date, status));
         }
 
-        Debug.Log($"✅ 출석 버튼 생성됨 - 날짜: {date}, 상태: {status}");
+        Debug.Log($"출석 버튼 생성됨 - 날짜: {date}, 상태: {status}");
     }
 
     void OnAttendanceButtonClick(string date, string status)
     {
-        Debug.Log($"👆 클릭됨: 출석 날짜: {date}, 상태: {status}");
+        Debug.Log($"클릭됨: 출석 날짜: {date}, 상태: {status}");
     }
 
     void DisplayNoAttendanceInfo(string message)
     {
-        Debug.Log("🚫 DisplayNoAttendanceInfo 호출됨: " + message);
+        Debug.Log("DisplayNoAttendanceInfo 호출됨: " + message);
 
         foreach (Transform child in scrollViewContent)
         {

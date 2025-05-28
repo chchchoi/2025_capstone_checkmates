@@ -16,7 +16,7 @@ public class FindMember : MonoBehaviour
         }
         else
         {
-            Debug.LogError("❌ searchInputField가 할당되지 않았습니다!");
+            Debug.LogError("searchInputField가 할당되지 않았습니다.");
         }
     }
 
@@ -33,7 +33,7 @@ public class FindMember : MonoBehaviour
     {
     if (memberManager == null)
     {
-        Debug.LogError("❌ memberManager가 연결되지 않았습니다!");
+        Debug.LogError("memberManager가 연결되지 않았습니다.");
         return;
     }
 

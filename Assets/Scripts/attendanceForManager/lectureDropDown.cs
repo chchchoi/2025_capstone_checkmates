@@ -1,5 +1,3 @@
-// ✅ LectureDropdown.cs - 고유 ID 사용 + 드롭다운은 name 필드 기반 + 요일 필드 제거 + 시간 중복 방지
-
 using UnityEngine;
 using Firebase;
 using Firebase.Firestore;
@@ -14,7 +12,7 @@ public class LectureDropdown : MonoBehaviour
 {
     public TMP_Dropdown dropdown;
     public TMP_Text codeText;
-    public TMP_Text infoText; // 🔹 시간 중복 메시지 출력용 텍스트
+    public TMP_Text infoText; // 시간 중복 메시지 출력용 텍스트
     public GameObject Codepanel;
     public GameObject editPanel;
     public Button closeButton, copyButton, editButton, deleteButton, updateButton;
@@ -46,7 +44,7 @@ public class LectureDropdown : MonoBehaviour
         }
         else
         {
-            Debug.LogError("❌ 사용자가 로그인되지 않았습니다.");
+            Debug.LogError("사용자가 로그인되지 않았습니다.");
         }
     }
 
@@ -77,8 +75,8 @@ public class LectureDropdown : MonoBehaviour
 
         if (names == null || names.Count == 0)
         {
-            Debug.LogWarning("❗ 과목 리스트가 비어 있습니다. ManagerProfile 씬으로 이동합니다.");
-            SceneManager.LoadScene("ManagerProfile"); // ✅ 씬 이름 정확히 기입
+            Debug.LogWarning("과목 리스트가 비어 있습니다. ManagerProfile 씬으로 이동합니다.");
+            SceneManager.LoadScene("ManagerProfile"); 
             return;
         }
 
@@ -175,44 +173,61 @@ public class LectureDropdown : MonoBehaviour
         string newStart = $"{newStartHour:D2}:{newStartMinute:D2}";
         string newEnd = $"{newEndHour:D2}:{newEndMinute:D2}";
 
-        db.Collection("subjects").WhereEqualTo("manager", userEmail).GetSnapshotAsync().ContinueWithOnMainThread(task =>
+        // 현재 수정하려는 과목의 요일을 먼저 가져옴
+        db.Collection("subjects").Document(selectedSubjectId).GetSnapshotAsync().ContinueWithOnMainThread(docTask =>
         {
-            if (task.IsCompletedSuccessfully)
+            if (!docTask.IsCompletedSuccessfully || !docTask.Result.Exists)
             {
-                foreach (var doc in task.Result.Documents)
-                {
-                    if (doc.Id == selectedSubjectId) continue;
-
-                    string existStart = doc.TryGetValue("startTime", out string st) ? st : "00:00";
-                    string existEnd = doc.TryGetValue("endTime", out string et) ? et : "00:00";
-
-                    if (IsTimeOverlap(newStart, newEnd, existStart, existEnd))
-                    {
-                        infoText.text = "이미 겹치는 시간대의 과목이 존재합니다.";
-                        Debug.LogWarning("시간 겹침 감지됨");
-                        return;
-                    }
-                }
-
-                var update = new Dictionary<string, object>
-                {
-                    ["name"] = newName,
-                    ["startTime"] = newStart,
-                    ["endTime"] = newEnd
-                };
-
-                db.Collection("subjects").Document(selectedSubjectId).UpdateAsync(update).ContinueWithOnMainThread(updateTask =>
-                {
-                    if (!updateTask.IsFaulted)
-                    {
-                        Debug.Log("✅ 수정 성공");
-                        infoText.text = "";
-                        editPanel.SetActive(false);
-                    }
-                });
+                infoText.text = "과목 정보를 불러올 수 없습니다.";
+                return;
             }
+
+            string currentDay = docTask.Result.TryGetValue("day", out string d) ? d : "";
+
+            // 🔍 해당 요일 기준으로만 시간 겹침 확인
+            db.Collection("subjects").WhereEqualTo("manager", userEmail).GetSnapshotAsync().ContinueWithOnMainThread(task =>
+            {
+                if (task.IsCompletedSuccessfully)
+                {
+                    foreach (var doc in task.Result.Documents)
+                    {
+                        if (doc.Id == selectedSubjectId) continue;
+
+                        string existDay = doc.TryGetValue("day", out string d) ? d : "";
+                        string existStart = doc.TryGetValue("startTime", out string st) ? st : "00:00";
+                        string existEnd = doc.TryGetValue("endTime", out string et) ? et : "00:00";
+
+                        if (existDay == currentDay && IsTimeOverlap(newStart, newEnd, existStart, existEnd))
+                        {
+                            infoText.text = "같은 요일에 겹치는 시간대의 과목이 존재합니다.";
+                            Debug.LogWarning("시간 겹침 발생");
+                            return;
+                        }
+                    }
+
+                    // 겹침 없음: 업데이트 진행 (요일은 제외)
+                    var update = new Dictionary<string, object>
+                    {
+                        ["name"] = newName,
+                        ["startTime"] = newStart,
+                        ["endTime"] = newEnd
+                    };
+
+                    db.Collection("subjects").Document(selectedSubjectId).UpdateAsync(update).ContinueWithOnMainThread(updateTask =>
+                    {
+                        if (!updateTask.IsFaulted)
+                        {
+                            Debug.Log("과목 정보 수정 완료");
+                            infoText.text = "";
+                            editPanel.SetActive(false);
+                        }
+                    });
+                }
+            });
         });
     }
+
+
 
     bool IsTimeOverlap(string newStart, string newEnd, string existStart, string existEnd)
     {
@@ -232,7 +247,7 @@ public class LectureDropdown : MonoBehaviour
         {
             if (!task.IsFaulted)
             {
-                Debug.Log("✅ 삭제 성공");
+                Debug.Log("삭제 성공");
                 selectedSubjectId = "";
                 editPanel.SetActive(false);
                 RegisterRealTimeUpdates();

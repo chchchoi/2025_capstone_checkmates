@@ -1,13 +1,16 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TouchKeyManager : MonoBehaviour
+public class TouchKeyManager : MonoBehaviour, IPointerDownHandler
 {
-    void Update()
+    public TMP_InputField inputField;
+
+    public void OnPointerDown(PointerEventData eventData)
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (inputField != null)
         {
-            EventSystem.current.SetSelectedGameObject(null);
+            inputField.ActivateInputField();
         }
     }
 }

@@ -6,6 +6,7 @@ using Firebase.Auth;
 using Firebase.Firestore;
 using Firebase.Extensions;
 using TMPro;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
@@ -18,6 +19,11 @@ public class SignUpManage : MonoBehaviour
     public TextMeshProUGUI personalButtonText, managerButtonText;
     public TextMeshProUGUI errorText;
     public Button registerButton;
+
+    public Button toggleVisibilityButton;
+    public Sprite eyeOpenIcon;
+    public Sprite eyeClosedIcon;
+    private bool isPasswordVisible = false;
 
     private FirebaseAuth auth;
     private FirebaseFirestore db;
@@ -40,6 +46,49 @@ public class SignUpManage : MonoBehaviour
 
         if (managerButton != null)
             managerButton.GetComponent<Button>().onClick.AddListener(SelectManager);
+
+        if (passwordInput != null)
+            passwordInput.onValueChanged.AddListener(OnPasswordChanged);
+
+        if (toggleVisibilityButton != null)
+            toggleVisibilityButton.onClick.AddListener(TogglePasswordVisibility);
+    }
+
+    void OnPasswordChanged(string newText)
+    {
+        if (Regex.IsMatch(newText, @"[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]"))
+        {
+            errorText.text = "비밀번호는 영문과 숫자의 조합으로 입력해주세요.";
+            errorText.gameObject.SetActive(true);
+
+            string filtered = Regex.Replace(newText, @"[\u1100-\u11FF\u3130-\u318F\uAC00-\uD7A3]", "");
+            passwordInput.onValueChanged.RemoveListener(OnPasswordChanged);
+            passwordInput.text = filtered;
+            passwordInput.caretPosition = filtered.Length;
+            passwordInput.onValueChanged.AddListener(OnPasswordChanged);
+        }
+        else if (errorText.text == "비밀번호는 영문과 숫자의 조합으로 입력해주세요.")
+        {
+            errorText.text = "";
+            errorText.gameObject.SetActive(false);
+        }
+    }
+
+    void TogglePasswordVisibility()
+    {
+        isPasswordVisible = !isPasswordVisible;
+        ApplyPasswordMask();
+    }
+
+    void ApplyPasswordMask()
+    {
+        passwordInput.contentType = isPasswordVisible ? TMP_InputField.ContentType.Standard : TMP_InputField.ContentType.Password;
+        passwordInput.ForceLabelUpdate();
+
+        if (toggleVisibilityButton.image != null)
+        {
+            toggleVisibilityButton.image.sprite = isPasswordVisible ? eyeOpenIcon : eyeClosedIcon;
+        }
     }
 
     public void SelectPersonal()
@@ -113,11 +162,48 @@ public class SignUpManage : MonoBehaviour
             }
 
             FirebaseUser newUser = task.Result.User;
-
-            // 이메일 인증 없이 바로 저장
-            errorText.text = "회원가입이 완료되었습니다.";
-            SaveUserToFirestore();
+            newUser.SendEmailVerificationAsync().ContinueWithOnMainThread(verifyTask =>
+            {
+                if (verifyTask.IsCompleted)
+                {
+                    errorText.text = "인증 메일이 전송되었습니다.";
+                    StartCoroutine(CheckVerificationLoop());
+                }
+                else
+                {
+                    errorText.text = "인증 메일 전송에 실패했습니다.";
+                }
+            });
         });
+    }
+
+    IEnumerator CheckVerificationLoop()
+    {
+        int maxTries = 60; // 3초 x 60 = 3분
+        for (int i = 0; i < maxTries; i++)
+        {
+            FirebaseUser user = auth.CurrentUser;
+            if (user != null)
+            {
+                yield return new WaitForSeconds(3f);
+
+                var task = user.ReloadAsync();
+                yield return new WaitUntil(() => task.IsCompleted);
+
+                if (user.IsEmailVerified)
+                {
+                    Debug.Log("이메일 인증 완료됨");
+                    SaveUserToFirestore();
+                    yield break;
+                }
+            }
+            else
+            {
+                yield return null;
+            }
+        }
+
+        errorText.text = "이메일 인증 시간이 초과되었습니다. 다시 시도해주세요.";
     }
 
     void SaveUserToFirestore()
@@ -131,7 +217,7 @@ public class SignUpManage : MonoBehaviour
             { "phoneNumber", phoneNumberInput.text }
         };
 
-        // ✅ 1. users/{userType}/{email}/profile 저장
+        // 1. users/{userType}/{email}/profile 저장
         db.Collection("users").Document(userType)
           .Collection(emailInput.text)
           .Document("profile")
@@ -139,7 +225,7 @@ public class SignUpManage : MonoBehaviour
           {
               if (storeTask.IsCompleted)
               {
-                  Debug.Log("✅ users 경로 저장 완료");
+                  Debug.Log("users 경로 저장 완료");
                   SceneManager.LoadScene("loginScene");
               }
               else
@@ -148,17 +234,17 @@ public class SignUpManage : MonoBehaviour
               }
           });
 
-        // ✅ 2. people/{name} 저장
+        // 2. people/{name} 저장
         db.Collection("people").Document(nameInput.text.Trim())
           .SetAsync(userData).ContinueWithOnMainThread(task =>
           {
               if (task.IsCompleted)
               {
-                  Debug.Log("✅ people 경로 저장 완료");
+                  Debug.Log("people 경로 저장 완료");
               }
               else
               {
-                  Debug.LogError("❌ people 저장 실패: " + task.Exception);
+                  Debug.LogError("people 저장 실패: " + task.Exception);
               }
           });
     }

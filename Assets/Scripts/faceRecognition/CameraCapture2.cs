@@ -20,7 +20,7 @@ public class CameraCapture2 : MonoBehaviour
 
         if (devices.Length == 0)
         {
-            Debug.LogError("❌ 사용 가능한 카메라가 없습니다.");
+            Debug.LogError("사용 가능한 카메라가 없습니다.");
             return;
         }
 
@@ -65,39 +65,39 @@ public class CameraCapture2 : MonoBehaviour
 
         yield return new WaitUntil(() => webcamTexture.width > 100);
 
-        // ✅ 비율 설정
+        // 비율 설정
         if (aspectRatioFitter != null)
         {
             aspectRatioFitter.aspectRatio = (float)webcamTexture.width / webcamTexture.height;
         }
 
-        // ✅ 크기 고정
+        // 크기 고정
         rawImage.rectTransform.sizeDelta = new Vector2(1500, 100);
 
-        // ✅ 회전 보정 (기기에서 제공하는 회전값 사용)
+        // 회전 보정 (기기에서 제공하는 회전값 사용)
         int rotation = webcamTexture.videoRotationAngle;
         rawImage.rectTransform.localEulerAngles = new Vector3(0, 0, rotation);
 
-        // ✅ 반전 보정
+        // 반전 보정
         bool isFrontFacing = devices[index].isFrontFacing;
         bool isMirrored = webcamTexture.videoVerticallyMirrored;
         if (isFrontFacing)
         {
-            int rotations = 90; // 🔥 테스트용으로 90으로 강제 설정
+            int rotations = 90; // 테스트용으로 90으로 강제 설정
             float scaleY = (rotations == 0 || rotations == 180) ? -1f : 1f;
             // 전면 카메라는 좌우 반전이 기본이므로 반전 처리
             rawImage.rectTransform.localScale = new Vector3(-1, 1, 1); // 좌우 반전
         }
         else
         {
-            // ✅ 후면 카메라: 회전 적용 + 상하 반전 조건
+            // 후면 카메라: 회전 적용 + 상하 반전 조건
             float scaleY = (rotation == 0 || rotation == 180) ? -1f : 1f;
             rawImage.rectTransform.localScale = new Vector3(1, scaleY, 1f);
-            rawImage.rectTransform.localEulerAngles = new Vector3(0, 0, -rotation); // 🔥 후면만 적용
+            rawImage.rectTransform.localEulerAngles = new Vector3(0, 0, -rotation); // 후면만 적용
         }
 
-        // ✅ 디버깅 로그 (원하면 지워도 됨)
-        Debug.Log($"📷 {devices[index].name}, front: {isFrontFacing}, rotation: {rotation}, mirrored: {isMirrored}");
+        // 디버깅 로그 (원하면 지워도 됨)
+        Debug.Log($"{devices[index].name}, front: {isFrontFacing}, rotation: {rotation}, mirrored: {isMirrored}");
     }
 
     public void OnRegisterButtonClicked()

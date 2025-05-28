@@ -13,7 +13,7 @@ public class FaceRegister : MonoBehaviour
     public TextMeshProUGUI statusText;
     public GameObject statusPanel;
 
-    private string url = "http://223.194.131.148:5050/register";
+    private string url = "http://223.194.128.42:5050/register";
     private FirebaseAuth auth;
     private FirebaseFirestore db;
 
@@ -37,13 +37,13 @@ public class FaceRegister : MonoBehaviour
         string email = user.Email;
         Debug.Log("등록 요청: 이메일=" + email + ", 이미지 크기=" + imageData.Length);
 
-        // ✅ 1. 사람 이름 Firestore에서 가져오기
+        // 1. 사람 이름 Firestore에서 가져오기
         Task<string> nameTask = GetUserNameFromFirestore(email);
         yield return new WaitUntil(() => nameTask.IsCompleted);
 
         string userName = nameTask.Result ?? email; // 실패 시 이메일 표시
 
-        // ✅ 2. 서버에 얼굴 등록 요청
+        // 2. 서버에 얼굴 등록 요청
         WWWForm form = new WWWForm();
         form.AddField("email", email);
         form.AddBinaryData("image", imageData, "face.jpg", "image/jpeg");
@@ -87,7 +87,7 @@ public class FaceRegister : MonoBehaviour
         yield return null;
     }
 
-    // 🔍 Firestore에서 이름 조회
+    // Firestore에서 이름 조회
     private async Task<string> GetUserNameFromFirestore(string email)
     {
         try

@@ -33,12 +33,12 @@ public class memberManage : MonoBehaviour
 
         if (!string.IsNullOrEmpty(userEmail))
         {
-            Debug.Log("✅ 로그인된 사용자: " + userEmail);
+            Debug.Log("로그인된 사용자: " + userEmail);
             RegisterRealTimeUpdates();
         }
         else
         {
-            Debug.LogError("❌ 로그인된 사용자가 없음.");
+            Debug.LogError("로그인된 사용자가 없음.");
         }
     }
 

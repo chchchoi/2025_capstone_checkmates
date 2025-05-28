@@ -71,7 +71,7 @@ public class editLectures : MonoBehaviour
             return;
         }
 
-        // 🔹 users > manager > email > lectures > 선택된 과목 이름 > Info 수정
+        // users > manager > email > lectures > 선택된 과목 이름 > Info 수정
         DocumentReference lectureRef = db.Collection("users").Document(userType)
             .Collection(userEmail)
             .Document("lectures")
@@ -100,7 +100,7 @@ public class editLectures : MonoBehaviour
             }
         });
 
-        // 🔹 subjects > 과목 이름 > manager 필드 수정
+        // subjects > 과목 이름 > manager 필드 수정
         DocumentReference subjectRef = db.Collection("subjects").Document(subjectName);
         Dictionary<string, object> subjectData = new Dictionary<string, object>
         {
@@ -133,7 +133,7 @@ public class editLectures : MonoBehaviour
             return;
         }
 
-        // 🔹 users > manager > email > lectures > 선택된 과목 이름 삭제
+        // users > manager > email > lectures > 선택된 과목 이름 삭제
         DocumentReference lectureRef = db.Collection("users").Document(userType)
             .Collection(userEmail)
             .Document("lectures")
@@ -154,7 +154,7 @@ public class editLectures : MonoBehaviour
             }
         });
 
-        // 🔹 subjects > 과목 이름 삭제
+        // subjects > 과목 이름 삭제
         DocumentReference subjectRef = db.Collection("subjects").Document(selectedSubjectName);
         subjectRef.DeleteAsync().ContinueWith(subjectTask =>
         {

@@ -30,7 +30,7 @@ public class addLectureListForPersonal : MonoBehaviour
         }
         else
         {
-            Debug.LogError("❌ 사용자가 로그인되지 않았습니다.");
+            Debug.LogError("사용자가 로그인되지 않았습니다.");
         }
     }
 
@@ -123,7 +123,7 @@ public class addLectureListForPersonal : MonoBehaviour
             {
                 PlayerPrefs.SetString("SelectedSubjectName", subjectName);  // 이름 저장
                 PlayerPrefs.SetString("SelectedSubject", subjectId);        // ID 저장 (추가적으로 필요 시)
-                Debug.Log($"🎯 선택된 과목: {subjectName}");
+                Debug.Log($"선택된 과목: {subjectName}");
                 SceneManager.LoadScene("attendanceForPersonal");
             });
         }

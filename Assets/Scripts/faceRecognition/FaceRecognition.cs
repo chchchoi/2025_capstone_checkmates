@@ -16,11 +16,11 @@ public class ServerResponse
 
 public class FaceRecognition : MonoBehaviour
 {
-    private string serverUrl = "http://223.194.131.148:5050/check";
+    private string serverUrl = "http://223.194.128.42:5050/check";
 
     public TextMeshProUGUI resultText;
     public TMP_Text subjectText;
-    public GameObject statusPanel;  // ✅ 패널 오브젝트
+    public GameObject statusPanel;  // 패널 오브젝트
 
     public IEnumerator CheckAttendance(byte[] imageBytes)
     {
@@ -50,7 +50,7 @@ public class FaceRecognition : MonoBehaviour
 
             ServerResponse response = JsonUtility.FromJson<ServerResponse>(json);
 
-            // ✅ 서버 연결은 성공했지만 HTTP 에러라면 서버가 준 error 메시지 사용
+            // 서버 연결은 성공했지만 HTTP 에러라면 서버가 준 error 메시지 사용
             if (request.result != UnityWebRequest.Result.Success)
             {
                 string errorMsg = !string.IsNullOrEmpty(response?.error) ? response.error : request.error;
@@ -58,7 +58,7 @@ public class FaceRecognition : MonoBehaviour
                 yield break;
             }
 
-            // ✅ 성공 응답 처리
+            // 성공 응답 처리
             string message = !string.IsNullOrEmpty(response.message) ? response.message : response.error;
             ShowMessage(message);
         }
@@ -71,14 +71,14 @@ public class FaceRecognition : MonoBehaviour
 
         if (statusPanel != null)
         {
-            statusPanel.SetActive(true);  // ✅ 패널 보이기
-            StartCoroutine(HidePanelAfterSeconds(5f));  // ✅ 5초 후 숨기기
+            statusPanel.SetActive(true);  // 패널 보이기
+            StartCoroutine(HidePanelAfterSeconds(5f));  // 5초 후 숨기기
         }
     }
 
     private IEnumerator HidePanelAfterSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        statusPanel.SetActive(false);  // ✅ 패널 숨기기
+        statusPanel.SetActive(false);  // 패널 숨기기
     }
 }

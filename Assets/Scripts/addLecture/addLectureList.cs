@@ -32,7 +32,7 @@ public class addLectureList : MonoBehaviour
         }
         else
         {
-            Debug.LogError("❌ 사용자가 로그인되지 않았습니다.");
+            Debug.LogError("사용자가 로그인되지 않았습니다.");
         }
     }
 
@@ -135,7 +135,7 @@ public class addLectureList : MonoBehaviour
 
     void OnSubjectButtonClick(string selectedSubjectName)
     {
-        Debug.Log($"✅ 클릭한 과목: {selectedSubjectName}");
+        Debug.Log($"클릭한 과목: {selectedSubjectName}");
 
         // 동일한 키로 저장
         PlayerPrefs.SetString("SelectedSubject", selectedSubjectName);

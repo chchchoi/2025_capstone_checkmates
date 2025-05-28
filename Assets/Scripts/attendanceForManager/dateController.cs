@@ -45,7 +45,7 @@ public class dateController : MonoBehaviour
     void Start()
     {
         db = FirebaseFirestore.DefaultInstance;
-        today = DateTime.UtcNow.ToLocalTime().Date;  // ✅ 로컬 시간 보정
+        today = DateTime.UtcNow.ToLocalTime().Date;  // 로컬 시간 보정
         selectedSubject = PlayerPrefs.GetString("SelectedSubject");
 
         GetSubjectInfoFromFirestore();
@@ -147,7 +147,7 @@ public class dateController : MonoBehaviour
         for (int day = 1; day <= daysInMonth; day++)
         {
             DateTime current = new DateTime(selectedYear, selectedMonth, day);
-            string currentDayStr = current.ToString("ddd", CultureInfo.InvariantCulture); // ✅ 영어 요일 강제
+            string currentDayStr = current.ToString("ddd", CultureInfo.InvariantCulture); 
 
             if (current.Date >= createDay.Date && current.Date <= today.Date && currentDayStr == subjectDay)
             {
@@ -182,7 +182,7 @@ public class dateController : MonoBehaviour
         }
 
         string selectedDate = $"{selectedYear}-{selectedMonth}-{selectedDay}";
-        Debug.Log($"🔍 검색 날짜: {selectedDate}");
+        Debug.Log($"검색 날짜: {selectedDate}");
         GetAttendanceData(selectedDate);
     }
 

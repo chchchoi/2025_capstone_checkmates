@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "224700644181",
+    "firebase_url": "https://checkmates-5afa6-default-rtdb.firebaseio.com",
     "project_id": "checkmates-5afa6",
     "storage_bucket": "checkmates-5afa6.firebasestorage.app"
   },
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB_icYrsuzojIFVHLOS4gsARGjFmLk4vOM"
+          "current_key": "AIzaSyChkktMaEk6Q3124C5A0Sg72Gg5Lve7H_s"
         }
       ],
       "services": {

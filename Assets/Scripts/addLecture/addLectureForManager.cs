@@ -106,7 +106,7 @@ public class addLectureForManager : MonoBehaviour
                       return;
                   }
 
-                  // ✅ 문서 ID 자동 생성 방식으로 저장
+                  // 문서 ID 자동 생성 방식으로 저장
                   Dictionary<string, object> subjectData = new Dictionary<string, object>
                   {
                       {"name", subjectName},
@@ -122,7 +122,7 @@ public class addLectureForManager : MonoBehaviour
                   {
                       if (task.IsCompletedSuccessfully)
                       {
-                          Debug.Log($"✅ 과목 저장 완료: {subjectName}");
+                          Debug.Log($"과목 저장 완료: {subjectName}");
                           ResetInputFields();
 
                           if (addPanel != null)
@@ -136,13 +136,13 @@ public class addLectureForManager : MonoBehaviour
                       }
                       else
                       {
-                          Debug.LogError($"❌ 과목 저장 실패: {task.Exception}");
+                          Debug.LogError($"과목 저장 실패: {task.Exception}");
                       }
                   });
               }
               else
               {
-                  Debug.LogError("❌ 기존 과목 조회 실패: " + queryTask.Exception);
+                  Debug.LogError("기존 과목 조회 실패: " + queryTask.Exception);
               }
           });
     }

@@ -13,7 +13,7 @@ public class addLectureforPersonal : MonoBehaviour
     public TMP_InputField subjectCodeInput;  // 과목 코드 입력 필드
     public Button addButton;  // 추가 버튼
     public Button closeButton;  // 닫기 버튼
-    public GameObject dialogPanel;  // 🔹 닫을 대상 패널 오브젝트 (Inspector에서 할당 필수!)
+    public GameObject dialogPanel;  // 닫을 대상 패널 오브젝트 
 
     private FirebaseAuth auth;
     private FirebaseFirestore db;
@@ -80,18 +80,18 @@ public class addLectureforPersonal : MonoBehaviour
                                     {
                                         if (dummyTask.IsCompletedSuccessfully)
                                         {
-                                            Debug.Log($"✅ {subjectId} 등록 성공");
-                                            CloseDialog();  // 🔥 정상적으로 판넬 닫기
+                                            Debug.Log($"{subjectId} 등록 성공");
+                                            CloseDialog();  // 정상적으로 판넬 닫기
                                         }
                                         else
                                         {
-                                            Debug.LogError("❌ init 문서 생성 실패");
+                                            Debug.LogError("init 문서 생성 실패");
                                         }
                                     });
                             }
                             else
                             {
-                                Debug.LogError("❌ 이메일 추가 실패");
+                                Debug.LogError("이메일 추가 실패");
                             }
                         });
 
@@ -100,21 +100,21 @@ public class addLectureforPersonal : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogError("❌ 과목 코드 일치 항목 없음");
+                    Debug.LogError("과목 코드 일치 항목 없음");
                 }
             });
     }
 
     void CloseDialog()
     {
-        Debug.Log("📌 CloseDialog 호출됨");
+        Debug.Log("CloseDialog 호출됨");
         if (dialogPanel != null)
         {
             dialogPanel.SetActive(false);
         }
         else
         {
-            Debug.LogWarning("⚠️ dialogPanel이 할당되지 않았습니다.");
+            Debug.LogWarning("dialogPanel이 할당되지 않았습니다.");
         }
     }
 }

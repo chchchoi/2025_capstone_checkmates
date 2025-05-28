@@ -2,8 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Firebase.Storage;
 using Firebase.Auth;
-using TMPro;
-using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 using Firebase.Extensions;
 
@@ -13,6 +11,9 @@ public class faceCheckManager : MonoBehaviour
     public Sprite registeredSprite;
     public Sprite defaultSprite;
 
+    private int foundImageCount = 0;
+    private int checkedCount = 0;
+
     void Start()
     {
         CheckFaceRegistration();
@@ -21,32 +22,52 @@ public class faceCheckManager : MonoBehaviour
     void CheckFaceRegistration()
     {
         string email = FirebaseAuth.DefaultInstance.CurrentUser.Email;
-        string filePath = $"faces/{email}.jpg";
 
-        FirebaseStorage.DefaultInstance
-            .GetReference(filePath)
-            .GetDownloadUrlAsync()
-            .ContinueWithOnMainThread(task =>
-            {
-                if (task.IsCompletedSuccessfully)
-                {
-                    // ✅ 등록됨: 버튼 비활성화 + 등록 이미지
-                    faceRegisterButton.image.sprite = registeredSprite;
-                    faceRegisterButton.onClick.RemoveAllListeners();  // 클릭 이벤트 제거
-                    // 버튼 비활성화 X → 이미지 투명도 유지
+        for (int i = 1; i <= 3; i++)  // ✅ 최대 3개만 확인
+        {
+            string filePath = $"faces/{email}_{i}.jpg";
 
-                }
-                else
+            FirebaseStorage.DefaultInstance
+                .GetReference(filePath)
+                .GetDownloadUrlAsync()
+                .ContinueWithOnMainThread(task =>
                 {
-                    // ❌ 등록 안됨: 버튼 활성화 + 기본 이미지 + 버튼 눌렀을 때 FaceRegister 씬으로 이동
-                    faceRegisterButton.image.sprite = defaultSprite;
-                    faceRegisterButton.interactable = true;
-                    faceRegisterButton.onClick.RemoveAllListeners();
-                    faceRegisterButton.onClick.AddListener(() =>
+                    checkedCount++;
+
+                    if (task.IsCompletedSuccessfully)
                     {
-                        SceneManager.LoadScene("FaceRegister");
-                    });
-                }
-            });
+                        foundImageCount++;
+                    }
+
+                    // ✅ 모든 확인 끝났을 때만 판단
+                    if (checkedCount == 3)
+                    {
+                        if (foundImageCount >= 3)
+                        {
+                            // 등록 완료 처리
+                            faceRegisterButton.image.sprite = registeredSprite;
+                            faceRegisterButton.onClick.RemoveAllListeners();
+                            // 버튼은 계속 활성화 상태로 유지 (그래야 흐려지지 않음)
+                            faceRegisterButton.interactable = true;  
+                        }
+                        else
+                        {
+                            // 등록 안됨 처리
+                            SetupRegisterButton();
+                        }
+                    }
+                });
+        }
+    }
+
+    void SetupRegisterButton()
+    {
+        faceRegisterButton.image.sprite = defaultSprite;
+        faceRegisterButton.interactable = true;
+        faceRegisterButton.onClick.RemoveAllListeners();
+        faceRegisterButton.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("FaceRegister");
+        });
     }
 }
