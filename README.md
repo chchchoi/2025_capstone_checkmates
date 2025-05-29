@@ -131,7 +131,7 @@
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
       <p align="left"> ◦ 같은 계정에서, 동일한 이름의 과목으로 수정 불가 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대는 생성 불가 </p>
-     <br><br><br><br><br><br><br><br><br><br><br><br><br>br>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img width="1150px" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
@@ -152,7 +152,7 @@
       <p align="left"> ◦ 에러 등의 인포 메시지 출력 </p>
       <p align="left"> ◦ 같은 계정에서, 동일한 이름의 과목으로 수정 불가 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대로 수정 불가 </p>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1330px"><br>
@@ -161,7 +161,7 @@
       <p align="left"> ◦ 기본은 전면 카메라 </p>
       <p align="left"> ◦ 후면 카메라 버튼 클릭 시 후면 카메라로 전환 </p>
       <p align="left"> ◦ 얼굴 인식 버튼 클릭 시 얼굴 인식 작동 : 서버에서 온 성공, 실패 등의 결과 메시지 출력 </p>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </td>
   </tr>
 </table>
@@ -183,7 +183,7 @@
       <img src="https://github.com/user-attachments/assets/91f3ffa0-dff9-45ff-a1e2-31957d061466" width="1220px"><br>
       <b>수강 과목 추가 화면</b>
       <p align="left"> ◦ 과목 코드 입력 창 </p>
-      <br><br><br><br><br><br><br><br><br><br><br>br><br>br><br>br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br>br><br><br>br><br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/d2e31d4f-f65b-4272-805b-500e05b7ffb0" width="1210px"><br>
