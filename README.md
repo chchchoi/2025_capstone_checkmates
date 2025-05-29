@@ -71,7 +71,7 @@
      <img src="https://github.com/user-attachments/assets/7461133f-d22c-490d-a774-13dadf42014d" width="1350px"><br>
      <b> 시작 화면 </b>
      <p align="left"> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
-     <br><br><br><br><br><br>
+     <br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1100px"><br>
@@ -131,7 +131,7 @@
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
       <p align="left"> ◦ 같은 계정에서, 동일한 이름의 과목으로 수정 불가 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대는 생성 불가 </p>
-     <br><br><br><br>
+     <br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img width="1250px" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
@@ -151,7 +151,7 @@
       <p align="left"> ◦ 에러 등의 인포 메시지 출력 </p>
       <p align="left"> ◦ 같은 계정에서, 동일한 이름의 과목으로 수정 불가 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대로 수정 불가 </p>
-      <br><br><br><br>
+      <br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1330px"><br>
@@ -160,7 +160,7 @@
       <p align="left"> ◦ 기본은 전면 카메라 </p>
       <p align="left"> ◦ 후면 카메라 버튼 클릭 시 후면 카메라로 전환 </p>
       <p align="left"> ◦ 얼굴 인식 버튼 클릭 시 얼굴 인식 작동 : 서버에서 온 성공, 실패 등의 결과 메시지 출력 </p>
-      <br><br><br><br>
+      <br><br><br><br><br><br><br>
     </td>
   </tr>
 </table>
@@ -176,19 +176,20 @@
       <p align="left"> ◦ 로그아웃 버튼 : 로그아웃 되고 로그인 화면으로 이동 </p>
       <p align="left"> ◦ 과목 추가 버튼 : 과목 추가 판넬 팝업</p>
       <p align="left"> ◦ 얼굴 등록 버튼 : 프로필 버튼 클릭 시 얼굴 등록 화면으로 이동 </p>
+      <br><br><
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/91f3ffa0-dff9-45ff-a1e2-31957d061466" width="1220px"><br>
       <b>수강 과목 추가 화면</b>
       <p align="left"> ◦ 과목 코드 입력 창 </p>
-      <br><br><br><br>
+      <br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/d2e31d4f-f65b-4272-805b-500e05b7ffb0" width="1210px"><br>
       <b>해당 과목의 출결 조회 화면</b>
       <p align="left"> ◦ 과목 정보 확인 (관리자 명, 과목 이름, 과목 요일, 시간대) </p>
       <p align="left"> ◦ 출결 상태 리스트 : 날짜 별 지각, 결석, 출석 상태 확인 가능 </p>
-      <br><br><br><br>
+      <br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1280px"><br>
