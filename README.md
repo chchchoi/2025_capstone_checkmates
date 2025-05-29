@@ -69,27 +69,38 @@
   <tr>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/7461133f-d22c-490d-a774-13dadf42014d" width="1350px"><br>
-      <b>시작 화면
-      <p> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
+      <b> 시작 화면 </b>
+      <p align="left"> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1250px"><br>
-      <b>로그인</b>
+      <b> 로그인 화면 </b>
       <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
       <p align="left"> ◦ 이메일, 비밀번호 입력 </p>
       <p align="left"> ◦ email 찾기, pw 찾기, 회원가입 버튼 클릭 시 각 화면으로 이동 </p>
+      <p align="left"> ◦ 맞지 않은 사용자 유형, 형식을 지키지 않은 이메일 등의 에러 메시지 출력 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/acc4579b-1d56-47cd-97f3-7282153017e4" width="1240px"><br>
-      <b>회원가입
+      <b> 회원가입 </b>
+      <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
+      <p align="left"> ◦ 기관명, 이름, 이메일, 비밀번호, 전화번호 입력 </p>
+      <p align="left"> ◦ 이메일 인증 기능 </p>
+      <p align="left"> ◦ 이미 존재하는 이메일, 형식을 지키지 않는 이메일 등의 에러 메시지 출력 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/4be9cb82-ba91-4073-ae8c-b410d9419497" width="1250px"><br>
-      <b>이메일 찾기
+      <b> 이메일 찾기 </b>
+      <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
+      <p align="left"> ◦ 이름, 전화번호 입력 </p>
+      <p align="left"> ◦ 이메일 인증 기능 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/87970809-c48b-4c9c-a885-01a3a97669b1" width="1250px"><br>
-      <b>비밀번호 찾기
+      <b>비밀번호 찾기 </b>
+      <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
+      <p align="left"> ◦ 이름, 이메일 입력 </p>
+      <p align="left"> ◦ 이메일로 비밀번호 초기화 이메일 전송  </p>
     </td>
   </tr>
 </table>
