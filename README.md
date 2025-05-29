@@ -74,7 +74,7 @@
      <br><br><br><br><br><br>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1250px"><br>
+      <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1100px"><br>
       <b> 로그인 화면 </b>
       <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
       <p align="left"> ◦ 이메일, 비밀번호 입력 </p>
@@ -106,6 +106,7 @@
       <p align="left"> ◦ 이름, 이메일 입력 </p>
       <p align="left"> ◦ 이메일로 비밀번호 초기화 이메일 전송  </p>
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
+      <br>
     </td>
   </tr>
 </table>
