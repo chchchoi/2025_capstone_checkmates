@@ -102,11 +102,11 @@
       <b>강의 과목 생성
     </td>
     <td align="center">
-      <img width="299" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
+      <img width="299" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" width="1250px"/><br>
       <b>과목별 출석 현황
     </td>
     <td align="center">
-     <img width="299" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236" /><br> 
+     <img width="299" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236" width="1250px"/><br> 
       <b>과목 상태 편집
     </td>
     <td align="center">
