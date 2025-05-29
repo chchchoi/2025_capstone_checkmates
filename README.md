@@ -68,9 +68,10 @@
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/7461133f-d22c-490d-a774-13dadf42014d" width="1350px"><br>
-      <b> 시작 화면 </b>
-      <p align="left"> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
+     <img src="https://github.com/user-attachments/assets/7461133f-d22c-490d-a774-13dadf42014d" width="1350px"><br>
+     <b> 시작 화면 </b>
+     <p align="left"> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
+     <br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1250px"><br>
@@ -78,29 +79,31 @@
       <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
       <p align="left"> ◦ 이메일, 비밀번호 입력 </p>
       <p align="left"> ◦ email 찾기, pw 찾기, 회원가입 버튼 클릭 시 각 화면으로 이동 </p>
-      <p align="left"> ◦ 맞지 않은 사용자 유형, 형식을 지키지 않은 이메일 등의 에러 메시지 출력 </p>
+      <p align="left"> ◦ 맞지 않은 사용자 유형, 형식을 지키지 않은 이메일 등의 인포 메시지 출력 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/acc4579b-1d56-47cd-97f3-7282153017e4" width="1240px"><br>
-      <b> 회원가입 </b>
+      <b> 회원가입 화면 </b>
       <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
       <p align="left"> ◦ 기관명, 이름, 이메일, 비밀번호, 전화번호 입력 </p>
       <p align="left"> ◦ 이메일 인증 기능 </p>
-      <p align="left"> ◦ 이미 존재하는 이메일, 형식을 지키지 않는 이메일 등의 에러 메시지 출력 </p>
+      <p align="left"> ◦ 이미 존재하는 이메일, 형식을 지키지 않는 이메일 등의 인포 메시지 출력 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/4be9cb82-ba91-4073-ae8c-b410d9419497" width="1250px"><br>
-      <b> 이메일 찾기 </b>
+      <b> 이메일 찾기 화면 </b>
       <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
       <p align="left"> ◦ 이름, 전화번호 입력 </p>
       <p align="left"> ◦ 이메일 인증 기능 </p>
+      <p align="left"> ◦ 인포 메시지 출력 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/87970809-c48b-4c9c-a885-01a3a97669b1" width="1250px"><br>
-      <b>비밀번호 찾기 </b>
+      <b>비밀번호 찾기 화면 </b>
       <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
       <p align="left"> ◦ 이름, 이메일 입력 </p>
       <p align="left"> ◦ 이메일로 비밀번호 초기화 이메일 전송  </p>
+      <p align="left"> ◦ 인포 메시지 출력 </p>
     </td>
   </tr>
 </table>
@@ -110,15 +113,20 @@
   <tr>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/de6400ba-0a5e-4d4d-a529-1ac0a16f363c" width="1280px"><br>
-      <b>관리자 과목 리스트
+      <b> 관리자 과목 리스트 화면 </b>
+      <p align="left"> ◦ 관리자 프로필 : 기관명, 이름 정보 확인 가능 </p>
+      <p align="left"> ◦ 로그아웃  </p>
+      <p align="left"> ◦ 과목 리스트 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/5975caf1-f253-44f0-9268-be58da3fb2fd" width="1310px"><br>
-      <b>강의 과목 생성
+      <b> 강의 과목 생성 화면 </b>
+      <p align="left"> ◦ 과목 이름, 요일, 시작 시간, 종료 시간 입력 </p>
+      <p align="left"> ◦ 겹치는 시간대의 과목을 생성하지 못하는 등의 인포 메시지 </p>
     </td>
     <td align="center">
       <img width="1250px" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
-      <b>과목별 출석 현황
+      <b> 과목별 출석 현황 화면 </b>
     </td>
     <td align="center">
      <img width="1250px" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236"/><br> 
