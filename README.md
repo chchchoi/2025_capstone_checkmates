@@ -1,4 +1,4 @@
-<img width="299" alt="att_edit" src="https://github.com/user-attachments/assets/340dbc31-e087-4369-946d-5210a6cdc5b8" /># 2025_capstone_checkmates
+# 2025_capstone_checkmates
 # [팀명]
 ### 듀가나디
 * 팀원
@@ -102,11 +102,11 @@
       <b>강의 과목 생성
     </td>
     <td align="center">
-      <img width="299" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" width="1250px"/><br>
+      <img width="1250px" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
       <b>과목별 출석 현황
     </td>
     <td align="center">
-     <img width="299" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236" width="1250px"/><br> 
+     <img width="1250px" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236"/><br> 
       <b>과목 상태 편집
     </td>
     <td align="center">
