@@ -1,7 +1,7 @@
 # 🔥 2025_capstone_checkmates 🔥
 # [팀명]
 ### 듀가나디 
-* 👩‍💻 팀원 
+* 👩‍💻 팀원 👩‍💻
   * 문지선 (팀장)
   * 남유진
   * 정서인
@@ -45,7 +45,7 @@
 <img src="https://github.com/user-attachments/assets/5c7ba701-640f-41d2-bb04-e7aa66cedf4a" width="70%">
 </p>
 
-# [적용 기술]
+# [적용 기술] 
 ### 핵심 기술
 * OpenCV: 얼굴 이미지 전처리 및 기본 이미지 처리 기능
 * InsightFace: 고성능 얼굴 인식 및 임베딩 비교
@@ -131,7 +131,7 @@
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
       <p align="left"> ◦ 같은 계정에서, 동일한 이름의 과목으로 수정 불가 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대는 생성 불가 </p>
-     <br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br>br>
     </td>
     <td align="center">
       <img width="1250px" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
@@ -143,6 +143,7 @@
       <p align="left"> ◦ 출석, 지각, 결석 상태인 학생들의 목록 </p>
       <p align="left"> ◦ 과목 수정 버튼 : 과목 수정 판넬 팝업 </p>
       <p align="left"> ◦ 맴버 관리 버튼 : 맴버 삭제 화면 이동 </p>
+     br><br>
     </td>
     <td align="center">
      <img width="1250px" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236"/><br> 
@@ -176,13 +177,13 @@
       <p align="left"> ◦ 로그아웃 버튼 : 로그아웃 되고 로그인 화면으로 이동 </p>
       <p align="left"> ◦ 과목 추가 버튼 : 과목 추가 판넬 팝업</p>
       <p align="left"> ◦ 얼굴 등록 버튼 : 프로필 버튼 클릭 시 얼굴 등록 화면으로 이동 </p>
-      <br><br>
+      <br><br>br><br>br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/91f3ffa0-dff9-45ff-a1e2-31957d061466" width="1220px"><br>
       <b>수강 과목 추가 화면</b>
       <p align="left"> ◦ 과목 코드 입력 창 </p>
-      <br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br>br><br>br><br>br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/d2e31d4f-f65b-4272-805b-500e05b7ffb0" width="1210px"><br>
