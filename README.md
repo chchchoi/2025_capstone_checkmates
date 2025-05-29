@@ -70,10 +70,14 @@
     <td align="center">
       <img src="https://github.com/user-attachments/assets/7461133f-d22c-490d-a774-13dadf42014d" width="1350px"><br>
       <b>시작 화면
+      <p> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1250px"><br>
       <b>로그인
+      <p> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 )</p>
+      <p> ◦ 이메일, 비밀번호 입력 </p>
+      <p> ◦ email 찾기, pw 찾기, 회원가입 버튼 클릭 시 각 화면으로 이동 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/acc4579b-1d56-47cd-97f3-7282153017e4" width="1240px"><br>
@@ -122,6 +126,7 @@
     <td align="center">
       <img src="https://github.com/user-attachments/assets/99550753-70c6-40b5-89f6-280fa7cf47a7" width="1230px"><br>
       <b>사용자 수강 과목 리스트
+      <p> ◦</p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/91f3ffa0-dff9-45ff-a1e2-31957d061466" width="1220px"><br>
