@@ -74,10 +74,10 @@
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1250px"><br>
-      <b>로그인
-      <p> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 )</p>
-      <p> ◦ 이메일, 비밀번호 입력 </p>
-      <p> ◦ email 찾기, pw 찾기, 회원가입 버튼 클릭 시 각 화면으로 이동 </p>
+      <b>로그인</b>
+      <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
+      <p align="left"> ◦ 이메일, 비밀번호 입력 </p>
+      <p align="left"> ◦ email 찾기, pw 찾기, 회원가입 버튼 클릭 시 각 화면으로 이동 </p>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/acc4579b-1d56-47cd-97f3-7282153017e4" width="1240px"><br>
