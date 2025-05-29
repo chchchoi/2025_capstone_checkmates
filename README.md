@@ -183,7 +183,7 @@
       <img src="https://github.com/user-attachments/assets/91f3ffa0-dff9-45ff-a1e2-31957d061466" width="1220px"><br>
       <b>수강 과목 추가 화면</b>
       <p align="left"> ◦ 과목 코드 입력 창 </p>
-      <br><br><br><br><br><br><br><br><br><br><br>br><br>br><br>br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br>br><br>br><br>br><br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/d2e31d4f-f65b-4272-805b-500e05b7ffb0" width="1210px"><br>
