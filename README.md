@@ -134,7 +134,7 @@
      <br><br><br><br><br><br><br><br><br><br><br><br><br>br>
     </td>
     <td align="center">
-      <img width="1250px" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
+      <img width="1150px" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
       <b> 과목별 출석 현황 화면 </b>
       <p align="left"> ◦ 출석, 지각, 결석 상태인 학생들의 목록 </p>
       <p align="left"> ◦ 과목 드롭다운으로 과목 이동 가능 </p>
@@ -177,20 +177,20 @@
       <p align="left"> ◦ 로그아웃 버튼 : 로그아웃 되고 로그인 화면으로 이동 </p>
       <p align="left"> ◦ 과목 추가 버튼 : 과목 추가 판넬 팝업</p>
       <p align="left"> ◦ 얼굴 등록 버튼 : 프로필 버튼 클릭 시 얼굴 등록 화면으로 이동 </p>
-      <br><br>br><br>br><br>
+      <br><br>br><br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/91f3ffa0-dff9-45ff-a1e2-31957d061466" width="1220px"><br>
       <b>수강 과목 추가 화면</b>
       <p align="left"> ◦ 과목 코드 입력 창 </p>
-      <br><br><br><br><br><br><br><br><br><br><br>br><br>br><br>br>
+      <br><br><br><br><br><br><br><br><br><br><br>br><br>br><br>br><br><br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/d2e31d4f-f65b-4272-805b-500e05b7ffb0" width="1210px"><br>
       <b>해당 과목의 출결 조회 화면</b>
       <p align="left"> ◦ 과목 정보 확인 (관리자 명, 과목 이름, 과목 요일, 시간대) </p>
       <p align="left"> ◦ 출결 상태 리스트 : 날짜 별 지각, 결석, 출석 상태 확인 가능 </p>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1280px"><br>
