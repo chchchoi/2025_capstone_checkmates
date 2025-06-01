@@ -129,7 +129,6 @@
       <b> 강의 과목 생성 화면 </b>
       <p align="left"> ◦ 과목 이름, 요일, 시작 시간, 종료 시간 입력 </p>
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
-      <p align="left"> ◦ 같은 계정에서, 동일한 이름의 과목으로 수정 불가 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대는 생성 불가 </p>
     </td>
     <td align="center">
@@ -148,7 +147,6 @@
       <b>과목 상태 편집 화면</b>
       <p align="left"> ◦ 과목 이름, 시작 시간, 종료 시간 수정 가능</p>
       <p align="left"> ◦ 에러 등의 인포 메시지 출력 </p>
-      <p align="left"> ◦ 같은 계정에서, 동일한 이름의 과목으로 수정 불가 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대로 수정 불가 </p>
     </td>
     <td align="center">
