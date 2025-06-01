@@ -65,12 +65,13 @@
 
 # [프로젝트 결과]
 ### 초기화면
-<table style="height: 6000px;">
+<table>
   <tr>
     <td align="center">
      <img src="https://github.com/user-attachments/assets/7461133f-d22c-490d-a774-13dadf42014d" width="1350px"><br>
      <b> 시작 화면 </b>
      <p align="left"> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
+     <div style="height: 800px;"></div>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1100px"><br>
@@ -79,6 +80,7 @@
       <p align="left"> ◦ 이메일, 비밀번호 입력 </p>
       <p align="left"> ◦ email 찾기, pw 찾기, 회원가입 버튼 클릭 시 각 화면으로 이동 </p>
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
+     <div style="height: 800px;"></div>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/acc4579b-1d56-47cd-97f3-7282153017e4" width="1240px"><br>
@@ -87,6 +89,7 @@
       <p align="left"> ◦ 기관명, 이름, 이메일, 비밀번호, 전화번호 입력 </p>
       <p align="left"> ◦ 이메일 인증 기능 </p>
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
+     <div style="height: 800px;"></div>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/4be9cb82-ba91-4073-ae8c-b410d9419497" width="1250px"><br>
@@ -95,6 +98,7 @@
       <p align="left"> ◦ 이름, 전화번호 입력 </p>
       <p align="left"> ◦ 이메일 인증 기능 </p>
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
+     <div style="height: 800px;"></div>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/87970809-c48b-4c9c-a885-01a3a97669b1" width="1250px"><br>
@@ -103,6 +107,7 @@
       <p align="left"> ◦ 이름, 이메일 입력 </p>
       <p align="left"> ◦ 이메일로 비밀번호 초기화 이메일 전송  </p>
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
+     <div style="height: 800px;"></div>
     </td>
   </tr>
 </table>
