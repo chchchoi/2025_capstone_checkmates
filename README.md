@@ -67,7 +67,7 @@
 ### 초기화면
 <table>
   <tr>
-    <td align="center" style="height: 3500px;">
+    <td align="center" style="height: 6000px;">
      <img src="https://github.com/user-attachments/assets/7461133f-d22c-490d-a774-13dadf42014d" width="1350px"><br>
      <b> 시작 화면 </b>
      <p align="left"> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
@@ -110,7 +110,7 @@
 ### 관리자 화면
 <table>
   <tr>
-    <td align="center" style="height: 3000px;" >
+    <td align="center" style="height: 6000px;" >
       <img src="https://github.com/user-attachments/assets/de6400ba-0a5e-4d4d-a529-1ac0a16f363c" width="1280px"><br>
       <b> 관리자 과목 리스트 화면 </b>
       <p align="left"> ◦ 관리자 프로필 : 기관명, 이름 정보 확인 가능 </p>
