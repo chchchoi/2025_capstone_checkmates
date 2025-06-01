@@ -110,7 +110,7 @@
 ### 관리자 화면
 <table>
   <tr>
-    <td align="center">
+    <td align="center" valign="top">
       <img src="https://github.com/user-attachments/assets/de6400ba-0a5e-4d4d-a529-1ac0a16f363c" width="1280px"><br>
       <b> 관리자 과목 리스트 화면 </b>
       <p align="left"> ◦ 관리자 프로필 : 기관명, 이름 정보 확인 가능 </p>
@@ -119,14 +119,14 @@
       <p align="left"> ◦ 과목 추가 버튼 : 과목을 추가하는 판넬 팝업 </p>
       <p align="left"> ◦ 얼굴 인식 버튼 : 프로필 사진 클릭 시 얼굴 인식 화면으로 이동 </p>
     </td>
-    <td align="center">
+    <td align="center" valign="top">
       <img src="https://github.com/user-attachments/assets/5975caf1-f253-44f0-9268-be58da3fb2fd" width="1310px"><br>
       <b> 강의 과목 생성 화면 </b>
       <p align="left"> ◦ 과목 이름, 요일, 시작 시간, 종료 시간 입력 </p>
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대는 생성 불가 </p>
     </td>
-    <td align="center">
+   <td align="center" valign="top">
       <img width="1150px" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
       <b> 과목별 출석 현황 화면 </b>
       <p align="left"> ◦ 출석, 지각, 결석 상태인 학생들의 목록 </p>
@@ -137,14 +137,14 @@
       <p align="left"> ◦ 과목 수정 버튼 : 과목 수정 판넬 팝업 </p>
       <p align="left"> ◦ 맴버 관리 버튼 : 맴버 삭제 화면 이동 </p>
     </td>
-    <td align="center">
+    <<td align="center" valign="top">
      <img width="1250px" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236"/><br> 
       <b>과목 상태 편집 화면</b>
       <p align="left"> ◦ 과목 이름, 시작 시간, 종료 시간 수정 가능</p>
       <p align="left"> ◦ 에러 등의 인포 메시지 출력 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대로 수정 불가 </p>
     </td>
-    <td align="center">
+   <td align="center" valign="top">
       <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1330px"><br>
       <b>출석 학생 얼굴 인식 화면</b>
       <p align="left"> ◦ 현재 시간대의 과목 이름 </p>
@@ -158,7 +158,7 @@
 ### 개인 화면
 <table>
   <tr>
-    <td align="center">
+    <td align="center" valign="top">
       <img src="https://github.com/user-attachments/assets/99550753-70c6-40b5-89f6-280fa7cf47a7" width="1230px"><br>
       <b>사용자 수강 과목 리스트 화면</b>
       <p align="left"> ◦ 사용자 프로필 : 사용자 이름 정보 </p>
@@ -167,18 +167,18 @@
       <p align="left"> ◦ 과목 추가 버튼 : 과목 추가 판넬 팝업</p>
       <p align="left"> ◦ 얼굴 등록 버튼 : 프로필 버튼 클릭 시 얼굴 등록 화면으로 이동 </p>
     </td>
-    <td align="center">
+    <td align="center" valign="top">
       <img src="https://github.com/user-attachments/assets/91f3ffa0-dff9-45ff-a1e2-31957d061466" width="1220px"><br>
       <b>수강 과목 추가 화면</b>
       <p align="left"> ◦ 과목 코드 입력 창 </p>
     </td>
-    <td align="center">
+    <<td align="center" valign="top">
       <img src="https://github.com/user-attachments/assets/d2e31d4f-f65b-4272-805b-500e05b7ffb0" width="1210px"><br>
       <b>해당 과목의 출결 조회 화면</b>
       <p align="left"> ◦ 과목 정보 확인 (관리자 명, 과목 이름, 과목 요일, 시간대) </p>
       <p align="left"> ◦ 출결 상태 리스트 : 날짜 별 지각, 결석, 출석 상태 확인 가능 </p>
     </td>
-    <td align="center">
+    <td align="center" valign="top">
       <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1280px"><br>
       <b>사용자 얼굴 등록 화면</b>
       <p align="left"> ◦ 뒤로 가기 버튼 : 사용자 프로필 화면으로 이동 </p>
