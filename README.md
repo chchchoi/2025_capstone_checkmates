@@ -199,6 +199,12 @@
 학원, 교육 기관뿐만 아니라 병원, 피트니스 센터, 사무실, 상업 매장 등 다양한 분야에서 고객 관리 및 인원 체크를 자동화하는 데 활용될 수 있어 전반적인 업무 효율성을 크게 높일 수 있습니다.
 
 # [성능 평가]
+<img src="https://github.com/user-attachments/assets/95667f32-3745-4889-a074-ed56152d26cc" width="49%">
+<img src="https://github.com/user-attachments/assets/425589bf-6b7a-4136-b049-d967741f1d99" width="49%">
+<img src="https://github.com/user-attachments/assets/4ede7a46-59cc-41bb-8bca-e7890be01af1" width="50%">
+
+# [판넬]
+<img src="https://github.com/user-attachments/assets/ffd264aa-a47c-4da5-8ac7-86f1518c19c9">
 
 # [시연 영상]
 
