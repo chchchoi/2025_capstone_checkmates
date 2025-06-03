@@ -73,7 +73,7 @@
      <p align="left"> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1050px"><br>
+      <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1080px"><br>
       <b> 로그인 화면 </b>
       <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
       <p align="left"> ◦ 이메일, 비밀번호 입력 </p>
@@ -120,14 +120,14 @@
       <p align="left"> ◦ 얼굴 인식 버튼 : 프로필 사진 클릭 시 얼굴 인식 화면으로 이동 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/5975caf1-f253-44f0-9268-be58da3fb2fd" width="1320px"><br>
+      <img src="https://github.com/user-attachments/assets/5975caf1-f253-44f0-9268-be58da3fb2fd" width="1340px"><br>
       <b> 강의 과목 생성 화면 </b>
       <p align="left"> ◦ 과목 이름, 요일, 시작 시간, 종료 시간 입력 </p>
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대는 생성 불가 </p>
     </td>
    <td align="center" valign="top">
-      <img width="1150px" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
+      <img width="1300px" alt="att" src="https://github.com/user-attachments/assets/b8cb620a-09ef-4e88-8cfc-3ae34c100ced" /><br>
       <b> 과목별 출석 현황 화면 </b>
       <p align="left"> ◦ 출석, 지각, 결석 상태인 학생들의 목록 </p>
       <p align="left"> ◦ 과목 드롭다운으로 과목 이동 가능 </p>
@@ -152,7 +152,7 @@
       <p align="left"> ◦ 검색창에 멤버 이름 검색 가능 </p>
     </td>
    <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1350px"><br>
+      <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1250px"><br>
       <b>출석 학생 얼굴 인식 화면</b>
       <p align="left"> ◦ 현재 시간대의 과목 이름 </p>
       <p align="left"> ◦ 기본은 전면 카메라 </p>
@@ -187,7 +187,7 @@
       <p align="left"> ◦ 출결 상태 리스트 : 날짜 별 지각, 결석, 출석 상태 확인 가능 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1280px"><br>
+      <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1230px"><br>
       <b>사용자 얼굴 등록 화면</b>
       <p align="left"> ◦ '< back' 버튼 : 사용자 프로필 화면으로 이동 </p>
       <p align="left"> ◦ 기본은 전면 카메라  </p>
