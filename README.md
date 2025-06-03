@@ -209,16 +209,17 @@
 <table> 
 <tr>
 <td>
-<img src="https://github.com/user-attachments/assets/95667f32-3745-4889-a074-ed56152d26cc" width="100%">
-</td>
-<td>
 <img src="https://github.com/user-attachments/assets/425589bf-6b7a-4136-b049-d967741f1d99" width="100%">
 </td>
 </tr>
 <tr>
 <img src="https://github.com/user-attachments/assets/4ede7a46-59cc-41bb-8bca-e7890be01af1" width="100%">
 </tr>
+<td>
+<img src="https://github.com/user-attachments/assets/95667f32-3745-4889-a074-ed56152d26cc" width="100%">
+</td>
 </table>
+
 
 # [판넬]
 <img src="https://github.com/user-attachments/assets/ffd264aa-a47c-4da5-8ac7-86f1518c19c9">
