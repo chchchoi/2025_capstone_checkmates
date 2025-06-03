@@ -138,7 +138,7 @@
       <p align="left"> ◦ 맴버 관리 버튼 : 맴버 삭제 화면 이동 </p>
     </td>
     <td align="center" valign="top">
-     <img width="1350px" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236"/><br> 
+     <img width="1340px" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236"/><br> 
       <b>과목 상태 편집 화면</b>
       <p align="left"> ◦ 과목 이름, 시작 시간, 종료 시간 수정 가능</p>
       <p align="left"> ◦ 에러 등의 인포 메시지 출력 </p>
@@ -187,7 +187,7 @@
       <p align="left"> ◦ 출결 상태 리스트 : 날짜 별 지각, 결석, 출석 상태 확인 가능 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1200px"><br>
+      <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1190px"><br>
       <b>사용자 얼굴 등록 화면</b>
       <p align="left"> ◦ '< back' 버튼 : 사용자 프로필 화면으로 이동 </p>
       <p align="left"> ◦ 기본은 전면 카메라  </p>
