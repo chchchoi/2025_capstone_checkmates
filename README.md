@@ -137,12 +137,19 @@
       <p align="left"> ◦ 과목 수정 버튼 : 과목 수정 판넬 팝업 </p>
       <p align="left"> ◦ 맴버 관리 버튼 : 맴버 삭제 화면 이동 </p>
     </td>
-    <<td align="center" valign="top">
+    <td align="center" valign="top">
      <img width="1250px" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236"/><br> 
       <b>과목 상태 편집 화면</b>
       <p align="left"> ◦ 과목 이름, 시작 시간, 종료 시간 수정 가능</p>
       <p align="left"> ◦ 에러 등의 인포 메시지 출력 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대로 수정 불가 </p>
+    </td>
+     <td align="center" valign="top">
+      <img width="1250px" alt="멤버 관리 화면" src="https://github.com/user-attachments/assets/0f73f82a-28bc-4316-9240-2b8f7fc789f0" />
+      <b>멤버 관리 화면</b>
+      <p align="left"> ◦ 과목 드롭 다운으로 과목 이동 가능 </p>
+      <p align="left"> ◦ 과목 별 수강 멤버 확인 및 삭제 가능 </p>
+      <p align="left"> ◦ 검색창에 멤버 이름 검색 가능 </p>
     </td>
    <td align="center" valign="top">
       <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1330px"><br>
