@@ -73,7 +73,7 @@
      <p align="left"> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1080px"><br>
+      <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1100px"><br>
       <b> 로그인 화면 </b>
       <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
       <p align="left"> ◦ 이메일, 비밀번호 입력 </p>
@@ -152,7 +152,7 @@
       <p align="left"> ◦ 검색창에 멤버 이름 검색 가능 </p>
     </td>
    <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1250px"><br>
+      <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1150px"><br>
       <b>출석 학생 얼굴 인식 화면</b>
       <p align="left"> ◦ 현재 시간대의 과목 이름 </p>
       <p align="left"> ◦ 기본은 전면 카메라 </p>
@@ -187,7 +187,7 @@
       <p align="left"> ◦ 출결 상태 리스트 : 날짜 별 지각, 결석, 출석 상태 확인 가능 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1230px"><br>
+      <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1200px"><br>
       <b>사용자 얼굴 등록 화면</b>
       <p align="left"> ◦ '< back' 버튼 : 사용자 프로필 화면으로 이동 </p>
       <p align="left"> ◦ 기본은 전면 카메라  </p>
