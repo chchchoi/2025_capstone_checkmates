@@ -1,7 +1,7 @@
-# 2025_capstone_checkmates
+# 2025_mobile capstone design_checkmates
 # [팀명]
 ### 듀가나디 
-* 👩‍💻 팀원 👩‍💻
+* 👩‍💻. 팀원 
   * 문지선 (팀장)
   * 남유진
   * 정서인
@@ -64,7 +64,7 @@
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/><img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white"/><img src="https://img.shields.io/badge/InsightFace-1E90FF?style=for-the-badge"/>
 
 # [프로젝트 결과물]
-### 초기화면 ☝️ 
+### ☝️. 초기화면  
 <table>
   <tr>
     <td align="center" valign="top">
@@ -107,7 +107,7 @@
   </tr>
 </table>
 
-### 관리자 화면 🧑‍💻
+### 🧑‍💻. 관리자 화면 
 <table>
   <tr>
     <td align="center" valign="top">
@@ -163,7 +163,7 @@
   </tr>
 </table>
 
-### 개인 화면 👩‍💻
+### 👩‍💻. 개인 화면
 <table>
   <tr>
     <td align="center" valign="top">
@@ -194,7 +194,7 @@
       <p align="left"> ◦ 후면 카메라 전환 버튼 : 버튼 클릭 시 후면 카메라로 이동  </p>
       <p align="left"> ◦ 얼굴 인식의 정확도를 위해 3번의 촬영을 권고하는 안내 메시지 판넬 팝업 </p>
       <p align="left"> ◦ 얼굴 등록 버튼 : 버튼 클릭 시 서버 측의 결과 메시지 출력 </p>
-      <p align="left"> ◦ 3번 촬영 시 2초후 사용자 프로필 화면으로 이동하고, 프로필 사진이 변경되며 해당 화면으로 이동할 수 있는 기능이 차단됨. </p>
+      <p align="left"> ◦ 3번 촬영 시 5초 후 사용자 프로필 화면으로 이동하고, 프로필 사진이 변경되며 해당 화면으로 이동할 수 있는 기능이 차단됨. </p>
     </td>
   </tr>
 </table>
