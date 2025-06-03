@@ -73,7 +73,7 @@
      <p align="left"> ◦ 스플래시 화면 : 3초후 로그인 씬으로 이동 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1100px"><br>
+      <img src="https://github.com/user-attachments/assets/c9adcc46-6d7f-4f75-ae28-791d125e9084" width="1050px"><br>
       <b> 로그인 화면 </b>
       <p align="left"> ◦ 사용자 유형 선택 가능 ( 관리자, 개인 사용자 선택 가능 ) </p>
       <p align="left"> ◦ 이메일, 비밀번호 입력 </p>
@@ -120,7 +120,7 @@
       <p align="left"> ◦ 얼굴 인식 버튼 : 프로필 사진 클릭 시 얼굴 인식 화면으로 이동 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/5975caf1-f253-44f0-9268-be58da3fb2fd" width="1310px"><br>
+      <img src="https://github.com/user-attachments/assets/5975caf1-f253-44f0-9268-be58da3fb2fd" width="1320px"><br>
       <b> 강의 과목 생성 화면 </b>
       <p align="left"> ◦ 과목 이름, 요일, 시작 시간, 종료 시간 입력 </p>
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
@@ -132,32 +132,33 @@
       <p align="left"> ◦ 출석, 지각, 결석 상태인 학생들의 목록 </p>
       <p align="left"> ◦ 과목 드롭다운으로 과목 이동 가능 </p>
       <p align="left"> ◦ 년, 월, 일 드롭다운으로 날짜 이동 가능 (달력 버튼 클릭 시)</p>
-      <p align="left"> ◦ 과목 코드 버튼 : 과목 코드를 판넬로 확인 가능 (copy 기능) </p>
+      <p align="left"> ◦ 과목 코드 버튼 : 과목 코드를 판넬 팝업  </p>
       <p align="left"> ◦ 출석, 지각, 결석 상태인 학생들의 목록 </p>
       <p align="left"> ◦ 과목 수정 버튼 : 과목 수정 판넬 팝업 </p>
       <p align="left"> ◦ 맴버 관리 버튼 : 맴버 삭제 화면 이동 </p>
     </td>
     <td align="center" valign="top">
-     <img width="1250px" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236"/><br> 
+     <img width="1350px" alt="att_edit" src="https://github.com/user-attachments/assets/e16428d0-9dab-40a2-b2af-a241d567f236"/><br> 
       <b>과목 상태 편집 화면</b>
       <p align="left"> ◦ 과목 이름, 시작 시간, 종료 시간 수정 가능</p>
       <p align="left"> ◦ 에러 등의 인포 메시지 출력 </p>
       <p align="left"> ◦ 동일한 요일의 동일한 시간대로 수정 불가 </p>
     </td>
      <td align="center" valign="top">
-      <img width="1250px" alt="멤버 관리 화면" src="https://github.com/user-attachments/assets/0f73f82a-28bc-4316-9240-2b8f7fc789f0" />
+      <img width="1300px" alt="멤버 관리 화면" src="https://github.com/user-attachments/assets/0f73f82a-28bc-4316-9240-2b8f7fc789f0" />
       <b>멤버 관리 화면</b>
       <p align="left"> ◦ 과목 드롭 다운으로 과목 이동 가능 </p>
       <p align="left"> ◦ 과목 별 수강 멤버 확인 및 삭제 가능 </p>
       <p align="left"> ◦ 검색창에 멤버 이름 검색 가능 </p>
     </td>
    <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1330px"><br>
+      <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1350px"><br>
       <b>출석 학생 얼굴 인식 화면</b>
       <p align="left"> ◦ 현재 시간대의 과목 이름 </p>
       <p align="left"> ◦ 기본은 전면 카메라 </p>
       <p align="left"> ◦ 후면 카메라 버튼 클릭 시 후면 카메라로 전환 </p>
       <p align="left"> ◦ 얼굴 인식 버튼 클릭 시 얼굴 인식 작동 : 서버에서 온 성공, 실패 등의 결과 메시지 출력 </p>
+      <p align="left"> ◦ '< back' 버튼 클릭 시 관리자 비밀번호 입력 판넬 팝업 ( 성공 시 프로필 화면으로 이동 ) </p>
     </td>
   </tr>
 </table>
@@ -175,7 +176,7 @@
       <p align="left"> ◦ 얼굴 등록 버튼 : 프로필 버튼 클릭 시 얼굴 등록 화면으로 이동 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/91f3ffa0-dff9-45ff-a1e2-31957d061466" width="1220px"><br>
+      <img src="https://github.com/user-attachments/assets/91f3ffa0-dff9-45ff-a1e2-31957d061466" width="1250px"><br>
       <b>수강 과목 추가 화면</b>
       <p align="left"> ◦ 과목 코드 입력 창 </p>
     </td>
@@ -188,13 +189,12 @@
     <td align="center" valign="top">
       <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1280px"><br>
       <b>사용자 얼굴 등록 화면</b>
-      <p align="left"> ◦ 뒤로 가기 버튼 : 사용자 프로필 화면으로 이동 </p>
+      <p align="left"> ◦ '< back' 버튼 : 사용자 프로필 화면으로 이동 </p>
       <p align="left"> ◦ 기본은 전면 카메라  </p>
       <p align="left"> ◦ 후면 카메라 전환 버튼 : 버튼 클릭 시 후면 카메라로 이동  </p>
-      <p align="left"> ◦ 3번 촬영을 요하는 안내 메시지 판넬 팝업 </p>
+      <p align="left"> ◦ 얼굴 인식의 정확도를 위해 3번의 촬영을 권고하는 안내 메시지 판넬 팝업 </p>
       <p align="left"> ◦ 얼굴 등록 버튼 : 버튼 클릭 시 서버 측의 결과 메시지 출력 </p>
       <p align="left"> ◦ 3번 촬영 시 2초후 사용자 프로필 화면으로 이동하고, 프로필 사진이 변경되며 해당 화면으로 이동할 수 있는 기능이 차단됨. </p>
-      <p align="left"> ◦ 나눠서 촬영 가능 </p>
     </td>
   </tr>
 </table>
