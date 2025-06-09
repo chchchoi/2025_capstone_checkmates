@@ -228,5 +228,5 @@
 <img src="https://github.com/user-attachments/assets/ffd264aa-a47c-4da5-8ac7-86f1518c19c9">
 
 # [시연 영상]
-
+[![Watch the video](https://img.youtube.com/vi/q6Bdq27aaRI/0.jpg)](https://youtu.be/q6Bdq27aaRI)
 
