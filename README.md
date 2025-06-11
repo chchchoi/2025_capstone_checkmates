@@ -120,7 +120,7 @@
       <p align="left"> ◦ 얼굴 인식 버튼 : 프로필 사진 클릭 시 얼굴 인식 화면으로 이동 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/5975caf1-f253-44f0-9268-be58da3fb2fd" width="1340px"><br>
+      <img src="https://github.com/user-attachments/assets/2f3ab414-2406-4853-8be2-4dd1847a75ee" width="1340px"><br>
       <b> [ 강의 과목 생성 화면 ] </b>
       <p align="left"> ◦ 과목 이름, 요일, 시작 시간, 종료 시간 입력 </p>
       <p align="left"> ◦ 에러 등 인포 메시지 출력 </p>
@@ -152,7 +152,7 @@
       <p align="left"> ◦ 검색창에 멤버 이름 검색 가능 </p>
     </td>
    <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/3d6697f8-fd56-448b-8c12-b59ea5fdc427" width="1150px"><br>
+      <img src="https://github.com/user-attachments/assets/b4a7b47b-88e3-4de2-8625-b457513cf19b" width="1150px"><br>
       <b> [ 출석 학생 얼굴 인식 화면 ] </b>
       <p align="left"> ◦ 현재 시간대의 과목 이름 </p>
       <p align="left"> ◦ 기본은 전면 카메라 </p>
@@ -176,7 +176,7 @@
       <p align="left"> ◦ 얼굴 등록 버튼 : 프로필 버튼 클릭 시 얼굴 등록 화면으로 이동 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/91f3ffa0-dff9-45ff-a1e2-31957d061466" width="1250px"><br>
+      <img src="https://github.com/user-attachments/assets/ea02ced0-b756-4f83-8433-9d051af3e412" width="1250px"><br>
       <b> [ 수강 과목 추가 화면 ] </b>
       <p align="left"> ◦ 과목 코드 입력 창 </p>
     </td>
@@ -187,7 +187,7 @@
       <p align="left"> ◦ 출결 상태 리스트 : 날짜 별 지각, 결석, 출석 상태 확인 가능 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/4805b1ba-7ef8-4df9-a097-ceb3ddcbdff3" width="1190px"><br>
+      <img src="https://github.com/user-attachments/assets/9284006b-2c5b-49da-a2f1-99acc1c79238" width="1190px"><br>
       <b> [ 사용자 얼굴 등록 화면 ] </b>
       <p align="left"> ◦ '< back' 버튼 : 사용자 프로필 화면으로 이동 </p>
       <p align="left"> ◦ 기본은 전면 카메라  </p>
