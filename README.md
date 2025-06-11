@@ -176,7 +176,7 @@
       <p align="left"> ◦ 얼굴 등록 버튼 : 프로필 버튼 클릭 시 얼굴 등록 화면으로 이동 </p>
     </td>
     <td align="center" valign="top">
-      <img src="https://github.com/user-attachments/assets/ea02ced0-b756-4f83-8433-9d051af3e412" width="1250px"><br>
+      <img src="https://github.com/user-attachments/assets/ea02ced0-b756-4f83-8433-9d051af3e412" width="1350px"><br>
       <b> [ 수강 과목 추가 화면 ] </b>
       <p align="left"> ◦ 과목 코드 입력 창 </p>
     </td>
