@@ -230,3 +230,20 @@
 # [시연 영상]
 [![Watch the video](https://img.youtube.com/vi/q6Bdq27aaRI/0.jpg)](https://youtu.be/q6Bdq27aaRI)
 
+<details> <summary>📄 폰트 사용 및 라이선스 안내 (클릭해서 펼치기)</summary>
+Google Fonts
+Noto Sans, Noto Sans KR, Noto Color Emoji, Liberation Sans, Wix Madefor Display, Workbench 등
+
+라이선스: SIL Open Font License (OFL)
+⮕ 상업/비상업적 사용 가능, 수정/재배포 가능 (단, 수정 시 이름 변경 필요)
+
+네이버 나눔글꼴
+나눔바른고딕, 나눔스퀘어, 나눔스퀘어 네오
+
+라이선스: 비상업적 사용 무료
+⮕ 출처 표기 권장
+
+※ 사용된 폰트는 모두 해당 라이선스에 따라 사용되었으며,
+수정 여부가 명확하지 않은 경우에도 비상업적/교육용 용도임을 밝힙니다.
+
+</details>
