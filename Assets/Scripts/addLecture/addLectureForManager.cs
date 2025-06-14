@@ -194,5 +194,6 @@ public class addLectureForManager : MonoBehaviour
         endHourInput.text = "";
         endMinuteInput.text = "";
         dayDropdown.value = 0;
+        InfoMessage.text = ""; // error message
     }
 }

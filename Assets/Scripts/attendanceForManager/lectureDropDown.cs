@@ -173,7 +173,7 @@ public class LectureDropdown : MonoBehaviour
         string newStart = $"{newStartHour:D2}:{newStartMinute:D2}";
         string newEnd = $"{newEndHour:D2}:{newEndMinute:D2}";
 
-        // 현재 수정하려는 과목의 요일을 먼저 가져옴
+        // 현재 수정하려는 과목의 정보 가져오기
         db.Collection("subjects").Document(selectedSubjectId).GetSnapshotAsync().ContinueWithOnMainThread(docTask =>
         {
             if (!docTask.IsCompletedSuccessfully || !docTask.Result.Exists)
@@ -184,48 +184,81 @@ public class LectureDropdown : MonoBehaviour
 
             string currentDay = docTask.Result.TryGetValue("day", out string d) ? d : "";
 
-            // 🔍 해당 요일 기준으로만 시간 겹침 확인
-            db.Collection("subjects").WhereEqualTo("manager", userEmail).GetSnapshotAsync().ContinueWithOnMainThread(task =>
-            {
-                if (task.IsCompletedSuccessfully)
+            // 🔍 과목 이름 중복 검사 (동일 매니저 기준)
+            db.Collection("subjects")
+                .WhereEqualTo("manager", userEmail)
+                .WhereEqualTo("name", newName)
+                .GetSnapshotAsync().ContinueWithOnMainThread(nameTask =>
                 {
-                    foreach (var doc in task.Result.Documents)
+                    if (!nameTask.IsCompletedSuccessfully)
                     {
-                        if (doc.Id == selectedSubjectId) continue;
+                        infoText.text = "과목 이름 중복 검사를 실패했습니다.";
+                        return;
+                    }
 
-                        string existDay = doc.TryGetValue("day", out string d) ? d : "";
-                        string existStart = doc.TryGetValue("startTime", out string st) ? st : "00:00";
-                        string existEnd = doc.TryGetValue("endTime", out string et) ? et : "00:00";
-
-                        if (existDay == currentDay && IsTimeOverlap(newStart, newEnd, existStart, existEnd))
+                    foreach (var doc in nameTask.Result.Documents)
+                    {
+                        if (doc.Id != selectedSubjectId)
                         {
-                            infoText.text = "같은 요일에 겹치는 시간대의 과목이 존재합니다.";
-                            Debug.LogWarning("시간 겹침 발생");
+                            infoText.text = "같은 이름의 과목이 이미 존재합니다.";
                             return;
                         }
                     }
 
-                    // 겹침 없음: 업데이트 진행 (요일은 제외)
-                    var update = new Dictionary<string, object>
-                    {
-                        ["name"] = newName,
-                        ["startTime"] = newStart,
-                        ["endTime"] = newEnd
-                    };
+                // 이름 중복 없음 → 시간 겹침 검사
+                db.Collection("subjects")
+                  .WhereEqualTo("manager", userEmail)
+                  .GetSnapshotAsync().ContinueWithOnMainThread(task =>
+                  {
+                      if (task.IsCompletedSuccessfully)
+                      {
+                          foreach (var doc in task.Result.Documents)
+                          {
+                              if (doc.Id == selectedSubjectId) continue;
 
-                    db.Collection("subjects").Document(selectedSubjectId).UpdateAsync(update).ContinueWithOnMainThread(updateTask =>
-                    {
-                        if (!updateTask.IsFaulted)
-                        {
-                            Debug.Log("과목 정보 수정 완료");
-                            infoText.text = "";
-                            editPanel.SetActive(false);
-                        }
-                    });
-                }
-            });
+                              string existDay = doc.TryGetValue("day", out string d) ? d : "";
+                              string existStart = doc.TryGetValue("startTime", out string st) ? st : "00:00";
+                              string existEnd = doc.TryGetValue("endTime", out string et) ? et : "00:00";
+
+                              if (existDay == currentDay && IsTimeOverlap(newStart, newEnd, existStart, existEnd))
+                              {
+                                  infoText.text = "같은 요일에 겹치는 시간대의 과목이 존재합니다.";
+                                  Debug.LogWarning("시간 겹침 발생");
+                                  return;
+                              }
+                          }
+
+                      // 이름/시간 모두 문제 없음 → 업데이트 진행
+                      var update = new Dictionary<string, object>
+                          {
+                              ["name"] = newName,
+                              ["startTime"] = newStart,
+                              ["endTime"] = newEnd
+                          };
+
+                          db.Collection("subjects").Document(selectedSubjectId).UpdateAsync(update).ContinueWithOnMainThread(updateTask =>
+                          {
+                              if (!updateTask.IsFaulted)
+                              {
+                                  Debug.Log("과목 정보 수정 완료");
+                                  infoText.text = "";
+                                  editPanel.SetActive(false);
+                              }
+                              else
+                              {
+                                  infoText.text = "과목 정보 수정에 실패했습니다.";
+                              }
+                          });
+                      }
+                      else
+                      {
+                          infoText.text = "시간 겹침 확인 중 오류가 발생했습니다.";
+                      }
+                  });
+                });
         });
     }
+
 
 
 

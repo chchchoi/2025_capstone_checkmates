@@ -110,15 +110,15 @@ public class AttendanceForPersonalList : MonoBehaviour
 
     void GetSubjectDetails(DocumentSnapshot snapshot)
     {
-        Debug.Log("🧾 GetSubjectDetails 실행");
+        Debug.Log("GetSubjectDetails 실행");
 
         if (snapshot.ContainsField("createDate") && snapshot.ContainsField("day"))
         {
             string createDateStr = snapshot.GetValue<string>("createDate");
             string dayStr = snapshot.GetValue<string>("day");
 
-            Debug.Log("🗓️ createDate: " + createDateStr);
-            Debug.Log("📆 시작 요일: " + dayStr);
+            Debug.Log("createDate: " + createDateStr);
+            Debug.Log("시작 요일: " + dayStr);
 
             DateTime createDate = DateTime.Parse(createDateStr);
             int startDayIndex = weekDays.IndexOf(dayStr);

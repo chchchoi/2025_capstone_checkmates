@@ -23,7 +23,7 @@ public class faceCheckManager : MonoBehaviour
     {
         string email = FirebaseAuth.DefaultInstance.CurrentUser.Email;
 
-        for (int i = 1; i <= 3; i++)  // ✅ 최대 3개만 확인
+        for (int i = 1; i <= 3; i++)  // 최대 3개만 확인
         {
             string filePath = $"faces/{email}_{i}.jpg";
 
@@ -39,7 +39,7 @@ public class faceCheckManager : MonoBehaviour
                         foundImageCount++;
                     }
 
-                    // ✅ 모든 확인 끝났을 때만 판단
+                    // 모든 확인 끝났을 때만 판단
                     if (checkedCount == 3)
                     {
                         if (foundImageCount >= 3)

@@ -18,7 +18,7 @@ public class LoginManage : MonoBehaviour
     public TextMeshProUGUI personalButtonText, managerButtonText;
     public TextMeshProUGUI errorText;
     public Button loginButton;
-    public Button toggleVisibilityButton; // 👁️ 아이콘 버튼
+    public Button toggleVisibilityButton; // password eyes 아이콘 버튼
     public Sprite eyeOpenIcon;
     public Sprite eyeClosedIcon;
 

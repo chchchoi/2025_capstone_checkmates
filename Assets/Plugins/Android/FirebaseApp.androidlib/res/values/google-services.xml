@@ -4,7 +4,7 @@
   <string name="gcm_defaultSenderId" translatable="false">224700644181</string>
   <string name="google_storage_bucket" translatable="false">checkmates-5afa6.firebasestorage.app</string>
   <string name="project_id" translatable="false">checkmates-5afa6</string>
-  <string name="google_api_key" translatable="false">AIzaSyChkktMaEk6Q3124C5A0Sg72Gg5Lve7H_s</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyChkktMaEk6Q3124C5A0Sg72Gg5Lve7H_s</string>
+  <string name="google_api_key" translatable="false">AIzaSyBfOTRiW4A9px04B8zeqTvTIhNKjpdEAXw</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBfOTRiW4A9px04B8zeqTvTIhNKjpdEAXw</string>
   <string name="google_app_id" translatable="false">1:224700644181:android:80e0cff359989799d88ddc</string>
 </resources>

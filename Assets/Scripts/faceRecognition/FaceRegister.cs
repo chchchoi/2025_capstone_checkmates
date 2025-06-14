@@ -13,7 +13,7 @@ public class FaceRegister : MonoBehaviour
     public TextMeshProUGUI statusText;
     public GameObject statusPanel;
 
-    private string url = "http://223.194.128.42:5050/register";
+    private string url = "http://127.0.0.1:5050/register"; // server adress
     private FirebaseAuth auth;
     private FirebaseFirestore db;
 

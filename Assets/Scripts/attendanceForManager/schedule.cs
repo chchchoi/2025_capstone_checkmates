@@ -7,12 +7,12 @@ using Firebase.Auth;
 using Firebase.Firestore;
 using Firebase.Extensions;
 using TMPro;
-using UnityEngine.UI; // ✅ 버튼 사용을 위해 추가
+using UnityEngine.UI; // 버튼 사용을 위해 추가
 
 public class Schedule : MonoBehaviour
 {
     public TextMeshProUGUI subjectText;
-    public Button yourButton; // ✅ 버튼 변수 추가
+    public Button yourButton; // 버튼 변수 추가
 
     private FirebaseFirestore db;
     private FirebaseAuth auth;
@@ -70,7 +70,7 @@ public class Schedule : MonoBehaviour
                     currentSubject = subjectName;
 
                     subjectText.text = $"{subjectName}";
-                    yourButton.interactable = true; // ✅ 과목 있을 때 버튼 활성화
+                    yourButton.interactable = true; // 과목 있을 때 버튼 활성화
 
                     SaveToPlayerPrefs(currentSubject, currentStatus);
                     return;
@@ -79,7 +79,7 @@ public class Schedule : MonoBehaviour
         }
 
         subjectText.text = "현재 과목 없음";
-        yourButton.interactable = false; // ✅ 과목 없을 때 버튼 비활성화
+        yourButton.interactable = false; // 과목 없을 때 버튼 비활성화
     }
 
     private bool IsTimeInRange(string currentTimeStr, DateTime startTime, DateTime endTime)

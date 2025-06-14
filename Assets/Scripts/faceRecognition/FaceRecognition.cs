@@ -16,8 +16,7 @@ public class ServerResponse
 
 public class FaceRecognition : MonoBehaviour
 {
-    private string serverUrl = "http://223.194.128.42:5050/check";
-
+    private string serverUrl = "http://127.0.0.1:5050/check"; // server adress
     public TextMeshProUGUI resultText;
     public TMP_Text subjectText;
     public GameObject statusPanel;  // 패널 오브젝트

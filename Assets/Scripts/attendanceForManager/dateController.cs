@@ -45,15 +45,11 @@ public class dateController : MonoBehaviour
     void Start()
     {
         db = FirebaseFirestore.DefaultInstance;
-        today = DateTime.UtcNow.ToLocalTime().Date;  // 로컬 시간 보정
+        today = DateTime.UtcNow.ToLocalTime().Date;
         selectedSubject = PlayerPrefs.GetString("SelectedSubject");
 
-        GetSubjectInfoFromFirestore();
+        GetSubjectInfoFromFirestore(); // 이 안에서만 드롭다운 생성하도록
         searchButton.onClick.AddListener(OnSearchClicked);
-
-        PopulateYearDropdown();
-        PopulateMonthDropdown();
-        PopulateDayDropdown();
     }
 
     public void RefreshSubject()
@@ -73,14 +69,31 @@ public class dateController : MonoBehaviour
             }
 
             var snapshot = task.Result;
-            if (!snapshot.Exists) return;
+            if (!snapshot.Exists)
+            {
+                Debug.LogWarning("과목 문서가 존재하지 않습니다.");
+                return;
+            }
 
+            // Firestore에서 createDay와 subjectDay 받아오기
             string createDateStr = snapshot.GetValue<string>("createDate");
             subjectDay = snapshot.GetValue<string>("day");
-            createDay = DateTime.ParseExact(createDateStr, "yyyy-MM-dd", null);
 
+            // createDay를 제대로 파싱
+            try
+            {
+                createDay = DateTime.ParseExact(createDateStr, "yyyy-MM-dd", null);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"createDate 파싱 실패: {createDateStr}, 에러: {e.Message}");
+                return;
+            }
+
+            // 반드시 createDay 설정 이후 드롭다운 호출
             PopulateYearDropdown();
 
+            // 오늘이 수업 요일인 경우에만 출결 데이터 가져오기
             string selectedDate = $"{today:yyyy-MM-dd}";
             if (dropdownDay.options.Count > 0 && dropdownDay.options[0].text != "없음")
             {
@@ -93,6 +106,7 @@ public class dateController : MonoBehaviour
             }
         });
     }
+
 
     void PopulateYearDropdown()
     {
@@ -129,10 +143,15 @@ public class dateController : MonoBehaviour
         }
 
         dropdownMonth.AddOptions(months);
+
+        dropdownMonth.value = months.Count - 1;
+        dropdownMonth.RefreshShownValue();
+
         dropdownMonth.onValueChanged.AddListener(delegate { PopulateDayDropdown(); });
 
         PopulateDayDropdown();
     }
+
 
     void PopulateDayDropdown()
     {
@@ -147,7 +166,7 @@ public class dateController : MonoBehaviour
         for (int day = 1; day <= daysInMonth; day++)
         {
             DateTime current = new DateTime(selectedYear, selectedMonth, day);
-            string currentDayStr = current.ToString("ddd", CultureInfo.InvariantCulture); 
+            string currentDayStr = current.ToString("ddd", CultureInfo.InvariantCulture);
 
             if (current.Date >= createDay.Date && current.Date <= today.Date && currentDayStr == subjectDay)
             {
@@ -165,9 +184,12 @@ public class dateController : MonoBehaviour
         {
             dropdownDay.interactable = true;
             dropdownDay.AddOptions(validDays);
+
             dropdownDay.value = validDays.Count - 1;
+            dropdownDay.RefreshShownValue();
         }
     }
+
 
     void OnSearchClicked()
     {

@@ -138,7 +138,7 @@ public class CameraCapture : MonoBehaviour
 
         yield return StartCoroutine(faceRegister.RegisterStudent(imageBytes));
 
-        // ✅ 등록 후 스토리지 이미지 개수 확인
+        // 등록 후 스토리지 이미지 개수 확인
         StartCoroutine(CheckImageCountAndMoveScene());
     }
 
@@ -150,7 +150,7 @@ public class CameraCapture : MonoBehaviour
         StartCoroutine(StartCamera(currentCameraIndex));
     }
 
-    // ✅ 추가된 기능: 스토리지에서 이미지 3개 이상일 때 씬 전환
+    // 추가된 기능: 스토리지에서 이미지 3개 이상일 때 씬 전환
     private IEnumerator CheckImageCountAndMoveScene()
     {
         string email = FirebaseAuth.DefaultInstance.CurrentUser.Email;
