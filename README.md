@@ -230,7 +230,7 @@
 # [시연 영상]
 [![Watch the video](https://img.youtube.com/vi/q6Bdq27aaRI/0.jpg)](https://youtu.be/q6Bdq27aaRI)
 
-<details> <summary>📄 폰트 사용 및 라이선스 안내 (클릭해서 펼치기)</summary>
+<details> <summary> # 폰트 사용 및 라이선스 안내 </summary>
 Google Fonts
 Noto Sans, Noto Sans KR, Noto Color Emoji, Liberation Sans, Wix Madefor Display, Workbench 등
 
